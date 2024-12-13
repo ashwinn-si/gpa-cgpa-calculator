@@ -2,11 +2,47 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
 }
 
+/*view heights styling*/
+
 .vh-7-5{
-    height: 7.5vh;
+    height: 6.6vh;
 }
 .vh-70{
     height: 70vh;
+}
+
+/*font size styling*/
+
+.fs-l{
+    font-size: 2.8rem;
+}
+.fs-m{
+    font-size: 2.2rem;
+}
+.fs-s{
+    font-size: 1.6rem;
+}
+.fs-xs{
+    font-size: 1rem;
+}
+
+/*coloring styling*/
+.primary-bg-color{
+    background-color: #141414;
+}
+
+.primary-text-color{
+    color:#f4f4f9
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+    body{
+        background-color: #141414;
+    }
 }
