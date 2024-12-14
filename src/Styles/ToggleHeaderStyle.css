@@ -1,53 +1,65 @@
-.input {
-    color: #fff;
-    font-size: 1rem;
-    background-color: transparent;
-    width: 100%; /*need to change*/
-    box-sizing: border-box;
-    padding-inline: 0.5em;
-    padding-block: 0.7em;
-    border: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+:focus {
+    outline: 0;
+    border-color: rgba(255,235,59,1);
+    box-shadow: 0 0 0 4px rgba(255,235,59,0.5); /* Softer yellow highlight */
 }
 
-.input-border {
+.mydict div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.mydict input[type="radio"] {
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
     position: absolute;
-    border-radius: 20px;
-    width: 0;
-    height: 3px;
-    bottom: -2%;
-    left: 0;
-    transition: width 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    white-space: nowrap;
+    width: 1px;
 }
 
-.input:focus {
-    outline: none;
+.mydict input[type="radio"]:checked + span {
+    width: 25vw;
+    box-shadow: 0 0 0 0.0625em rgba(255,235,59,1); /* Yellow border */
+    /*background-color: rgba(255,235,59,0.2); !* Subtle yellow background *!*/
+    z-index: 1;
+    color: rgba(255,193,7,1); /* Darker yellow text for contrast */
 }
 
-.clicked {
-    width: 100%;
-}
-
-.form-control {
+label span {
+    display: block;
+    cursor: pointer;
     background-color: #141414;
+    padding: 0.375em 0.75em;
     position: relative;
-    --width-of-input: 300px;
-    border: none;
-}
-
-.input-alt {
+    margin-left: 0.0625em;
+    box-shadow: 0 0 0 0.0625em rgba(181, 191, 217, 0.8); /* Subtle gray border */
     font-size: 1.2rem;
-    padding-inline: 1em;
-    padding-block: 0.8em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #f4f4f9;
+    text-align: center;
+    transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+    width: 25vw;
+
 }
 
-.input-border-alt {
-    height: 3px;
-    background:linear-gradient(90deg, rgba(255,193,7,1) 0%, rgba(255,213,79,1) 74%, rgba(255,235,59,1) 100%);
-    transition: width 0.4s cubic-bezier(0.42, 0, 0.58, 1.00);
+label span:hover {
+    background-color: rgba(255,235,59,0.3); /* Highlighted yellow on hover */
+    color: rgba(255,193,7,1); /* Darker yellow text */
+    box-shadow: 0 0 0 0.125em rgba(255,193,7,0.6); /* Slightly thicker yellow border */
 }
 
-.cliked2 {
-    width: 100%;
+label:first-child span {
+    border-radius: 0.375em 0 0 0.375em;
+}
+
+label:last-child span {
+    border-radius: 0 0.375em 0.375em 0;
 }
