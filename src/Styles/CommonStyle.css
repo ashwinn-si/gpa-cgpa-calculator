@@ -20,19 +20,19 @@ body{
 /*font size styling*/
 
 .fs-l{
-    font-size: 2.8rem;
+    font-size: 3rem;
 }
 .fs-m-l{
-    font-size: 1.8rem;
+    font-size: 2.4rem;
 }
 .fs-m{
-    font-size: 2.2rem;
+    font-size: 1.8rem;
 }
 .fs-s{
-    font-size: 1.6rem;
+    font-size: 1.2rem;
 }
 .fs-xs{
-    font-size: 1rem;
+    font-size: 0.6rem;
 }
 
 /*coloring styling*/
@@ -44,8 +44,18 @@ body{
     color:#f4f4f9
 }
 
+/*delete container*/
+.delete-container{
+    cursor: pointer;
+}
 @media screen and (max-width: 768px) {
     .fs-l{
         font-size: 1.8rem;
+    }
+    .fs-m{
+        font-size: 1rem;
+    }
+    .delete-container span{
+        font-size: 1.5rem;
     }
 }

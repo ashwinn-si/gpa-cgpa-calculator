@@ -1,11 +1,13 @@
+*{
+    text-transform: capitalize;
+}
 .input {
     color: #fff;
     font-size: 1rem;
     background-color: transparent;
     width: 100%; /*need to change*/
     box-sizing: border-box;
-    padding-inline: 0.5em;
-    padding-block: 0.7em;
+
     border: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -31,18 +33,19 @@
 .form-control {
     background-color: #141414;
     position: relative;
-    --width-of-input: 300px;
+    width: 100%;
     border: none;
 }
 
 .input-alt {
+    width: 100%;
     font-size: 1.2rem;
-    padding-inline: 1em;
-    padding-block: 0.8em;
+
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .input-border-alt {
+
     height: 3px;
     background:linear-gradient(90deg, rgba(255,193,7,1) 0%, rgba(255,213,79,1) 74%, rgba(255,235,59,1) 100%);
     transition: width 0.4s cubic-bezier(0.42, 0, 0.58, 1.00);
@@ -50,4 +53,9 @@
 
 .input-alt:focus + .input-border-alt {
     width: 100%;
+}
+@media screen and (max-width: 768px) {
+    .input{
+        font-size: 1rem;
+    }
 }

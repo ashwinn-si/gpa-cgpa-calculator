@@ -1,6 +1,6 @@
 import MainFrame from "./Components/MainFrame";
 import ToggleHeader from "./Components/ToggleHeader";
-import GpaContainer from "./Components/GpaContainer";
+import GpaContainer from "./Components/GpaComponents/GpaContainer";
 import AddButtonContainer from "./Components/AddButtonContainer";
 import ResultButtonContainer from "./Components/ResultButtonContainer";
 import DropDownBox from "./Components/DropDownBox";
@@ -13,8 +13,6 @@ function App() {
   return (
           <MainFrame>
               <ToggleHeader />
-              <AddButtonContainer />
-              <ResultButtonContainer />
           </MainFrame>
   );
 }

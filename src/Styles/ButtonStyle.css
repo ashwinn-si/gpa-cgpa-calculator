@@ -54,4 +54,5 @@ button {
     text-decoration: none;
     background-color: #141414;
     border: none;
+    width: auto;
 }

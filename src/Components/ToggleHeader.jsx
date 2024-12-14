@@ -1,9 +1,8 @@
 import "../Styles/CommonStyle.css"
 import "../Styles/ToggleHeaderStyle.css"
 import {useEffect, useState} from "react";
-import GpaContainer from "./GpaContainer";
-import CgpaContainer from "./CgpaContainer";
-import AddButtonContainer from "./AddButtonContainer";
+import GpaContainer from "./GpaComponents/GpaContainer";
+import CgpaContainer from "./CgpaComponents/CgpaContainer";
 import UserGuideContainer from "./UserGuideContainer";
 
 

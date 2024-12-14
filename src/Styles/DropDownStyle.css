@@ -35,3 +35,8 @@
 .custom-dropdown .dropdown-divider {
     border-color: rgba(255, 255, 255, 0.5); /* Adjust divider color */
 }
+@media screen and (max-width: 768px) {
+    *{
+        font-size: 0.8rem;
+    }
+}
