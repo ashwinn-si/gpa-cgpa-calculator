@@ -2,7 +2,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #141414;
 }
 
 /*view heights styling*/
@@ -18,6 +21,9 @@
 
 .fs-l{
     font-size: 2.8rem;
+}
+.fs-m-l{
+    font-size: 1.8rem;
 }
 .fs-m{
     font-size: 2.2rem;
@@ -38,11 +44,8 @@
     color:#f4f4f9
 }
 
-
-
-
-@media screen and (min-width: 768px) {
-    body{
-        background-color: #141414;
+@media screen and (max-width: 768px) {
+    .fs-l{
+        font-size: 1.8rem;
     }
 }
