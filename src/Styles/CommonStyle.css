@@ -16,11 +16,17 @@ body{
 .vh-70{
     height: 70vh;
 }
+.vh-90{
+    height: 80vh;
+}
 .h-91{
     height: 87%;
 }
 .min-w{
     min-width: 300px;
+}
+.w-90{
+    width: 90%;
 }
 .max-w{
     max-width: 500px ;
