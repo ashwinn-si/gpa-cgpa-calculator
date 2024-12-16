@@ -17,7 +17,16 @@ body{
     height: 70vh;
 }
 .h-91{
-    height: 91%;
+    height: 87%;
+}
+.min-w{
+    min-width: 300px;
+}
+.max-w{
+    max-width: 500px ;
+}
+.h-50{
+    height: 200px;
 }
 /*font size styling*/
 
@@ -44,6 +53,13 @@ body{
 
 .primary-text-color{
     color:#f4f4f9
+}
+.hilight-text-color{
+    color: rgba(255,235,59,1);
+}
+
+.border-primary{
+    border-color: #f4f4f9 !important;
 }
 
 /*delete container*/
@@ -72,6 +88,20 @@ body{
     background: #555; /* Set color when hovering over the scrollbar */
 }
 
+/*pop up message*/
+.popup-message {
+    animation: slide-up 2s ease-out;
+}
+
+/* Keyframes for the bottom to top slide */
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 @media screen and (max-width: 768px) {
     .fs-l{
         font-size: 1.8rem;

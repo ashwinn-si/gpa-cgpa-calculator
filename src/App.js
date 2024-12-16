@@ -1,6 +1,6 @@
 import MainFrame from "./Components/MainFrame";
 import ToggleHeader from "./Components/ToggleHeader";
-import GpaContainer from "./Components/GpaComponents/GpaContainer";
+import CgpaContainer from "./Components/CgpaComponents/CgpaContainer";
 import AddButtonContainer from "./Components/AddButtonContainer";
 import ResultButtonContainer from "./Components/ResultButtonContainer";
 import DropDownBox from "./Components/DropDownBox";
