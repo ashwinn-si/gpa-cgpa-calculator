@@ -5,10 +5,9 @@ import GpaRow from "./GpaRow";
 import {useEffect, useRef, useState} from "react";
 import UserGuideContainer from "../UserGuideContainer";
 import ErrorMessageComponent from "../ErrorMessageComponent";
-import CgpaCalFunction from "../../JavaScriptFiles/CgpaCalFunction";
+import GpaCalFunction from "../../JavaScriptFiles/GpaCalFunction";
 import ResultDisplay from "../ResultDisplay";
-import PredictContainer from "../PredictContainer";
-import Button from "../Button";
+
 
 function GpaContainer(props) {
 
@@ -46,12 +45,13 @@ function GpaContainer(props) {
             if (errorFlag || values.length === 0) {
                 if(values.length === 0){
                     setUserInfoFlag(true);
+                    setAllRefs([]);
                 }
                 setResultFlag(false);
                 return;
             }
 
-            setResultGpa( await CgpaCalFunction(values))
+            setResultGpa( await GpaCalFunction(values))
             setResultFlag(true)
 
         } else  {

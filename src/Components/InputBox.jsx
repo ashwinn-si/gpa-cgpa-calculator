@@ -9,9 +9,10 @@ const InputBox = forwardRef((props, ref) => {
     const type = props.content.type;
 
     //values for use state and useeffect
-    const [value, setValue] = useState(null);
+    const [value, setValue] = useState(defaultValue);
 
     function handleChange(event) {
+
         setValue(event.target.value);
 
     }
