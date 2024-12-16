@@ -1,32 +1,45 @@
-import "../Styles/DropDownStyle.css"
-import {useEffect, useState} from "react";
+import "../Styles/DropDownStyle.css";
+import {forwardRef, useImperativeHandle, useState} from "react";
 
-function DropDownBox(props) {
-    const [value,setValue] = useState("O");
-    function handleChange(event) {
-        setValue(event.target.value);
+const DropDownBox = forwardRef((props , ref) => {
+    const [value, setValue] = useState(props.content.defaultValue);
+
+    function handleChange(item) {
+        setValue(item);
     }
 
-    useEffect(() => {
-        console.log("new value " + value);
-    },[value])
+    //sending data to the parent
+    useImperativeHandle(ref, () => ({
+        getData(){
+            return value
+        }
+    }))
 
     return (
         <>
             <div className="dropdown">
-                <button className="btn  dropdown-toggle custom-button" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                <button
+                    className="btn dropdown-toggle custom-button"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                >
                     {value}
                 </button>
                 <ul className="dropdown-menu custom-dropdown">
-                    <li className="dropdown-item" value="0" onClick={handleChange}> Action</li>
-                    <li className="dropdown-item" value="1" onClick={handleChange}>Another action</li>
-                    <li className="dropdown-item" value="2" onClick={handleChange}>Something else here</li>
+                    {props.content.values.map((item, index) => (
+                        <li
+                            className="dropdown-item text-center"
+                            onClick={() => handleChange(item)}
+                            key={index}
+                        >
+                            {item}
+                        </li>
+                    ))}
                 </ul>
             </div>
-
         </>
-    )
-}
+    );
+});
 
 export default DropDownBox;
