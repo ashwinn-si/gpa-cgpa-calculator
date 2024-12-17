@@ -138,7 +138,7 @@ function CgpaContainer() {
                         custom-border-bottom">
                             <ResultDisplay resultMessage="CGPA : " resultScore={ResultGpa}/>
                             <CgpaHeader/>
-                                <div className=" h-91 overflow-y-auto overflow-x-hidden custom-scrollbar d-flex justify-content-center align-items-center flex-column">
+                                <div className=" h-91 overflow-y-auto overflow-x-hidden custom-scrollbar">
                                     {
                                         ErrorFlag != 0 ? (<ErrorMessageComponent error={ErrorContent} />) : null
                                     }
