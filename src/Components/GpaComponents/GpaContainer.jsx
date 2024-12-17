@@ -74,7 +74,7 @@ function GpaContainer(props) {
                     <ResultDisplay resultMessage={resultFlag} resultScore={resultGpa}/>
                 <GpaHeader/>
 
-                <div className=" h-91 overflow-y-auto overflow-x-hidden custom-scrollbar">
+                <div className=" h-91 overflow-y-auto overflow-x-hidden custom-scrollbar ">
                     {ErrorFlag ? <ErrorMessageComponent error="Subject Name missing"/> : null}
                     {UserInfoFlag ? (
                         <UserGuideContainer message="Add Semester"/>
