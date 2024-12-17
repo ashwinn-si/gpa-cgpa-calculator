@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-
 # CGPA GPA Calculator
 
 
@@ -70,4 +67,3 @@ Contributions are always welcome! If you have suggestions, improvements, or fixe
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
->>>>>>> 64e64a67c5c8d0ced99fea87d268f7da2901a0e0
