@@ -7,6 +7,7 @@
     border-color: #8B5DFF; /* Purple border */
     box-shadow: 0 0 0 4px rgba(139, 93, 255, 0.5); /* Softer purple highlight */
     border-width: 1px;
+    cursor: none;
 }
 
 .mydict div {
@@ -16,6 +17,7 @@
     margin-top: 0.5rem;
     justify-content: center;
     align-items: center;
+    cursor: none;
 }
 
 .mydict input[type="radio"] {
@@ -26,12 +28,14 @@
     position: absolute;
     white-space: nowrap;
     width: 1px;
+    cursor: none;
 }
 
 .mydict input[type="radio"]:checked + span {
     box-shadow: 0 0 0 0.0625em #9f79ff; /* Purple border */
     z-index: 1;
     color: #9f79ff; /* Darker purple text for contrast */
+    cursor: none;
 }
 
 label span {
@@ -49,20 +53,24 @@ label span {
     text-align: center;
     transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
     width: 100%;
+    cursor: none;
 }
 
 label span:hover {
     background-color: rgba(139, 93, 255, 0.3); /* Highlighted purple on hover */
     color: #8B5DFF; /* Darker purple text */
     box-shadow: 0 0 0 0.125em rgba(139, 93, 255, 0.6); /* Slightly thicker purple border */
+    cursor: none;
 }
 
 label:first-child span {
     border-radius: 0.375em 0 0 0.375em;
+    cursor: none;
 }
 
 label:last-child span {
     border-radius: 0 0.375em 0.375em 0;
+    cursor: none;
 }
 
 @media  screen and (max-width: 768px) {

@@ -7,16 +7,19 @@
     color: #f4f4f4;
     padding-right: 2rem;
     position: relative;
+    cursor: none;
     width: 75px;
 }
 .custom-button::after{
     position: absolute;
     top: 46%;
     right:24%;
+    cursor: none;
 }
 .custom-dropdown {
     background-color: #141414 !important; /* Transparent background */
     border: 0.1px solid rgba(255, 255, 255, 0.5); /* Semi-transparent border */
+    cursor: none;
 }
 
 .custom-dropdown .dropdown-item {
@@ -24,7 +27,7 @@
     border: 0.1px solid transparent; /* Invisible border initially */
     padding:0.5rem 0.5rem; /* Add padding for spacing inside the border */
     transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth transition for border and background */
-
+    cursor: none;
 }
 
 .custom-dropdown .dropdown-item:hover,
@@ -32,18 +35,23 @@
     border: 0.1px solid rgba(255, 255, 255, 0.8); /* Border becomes visible on hover */
     background-color: #9f79ff; /* Subtle hover background effect */
     color: #fff; /* Maintain text color */
-
+    cursor: none;
 }
 
 .custom-dropdown .dropdown-divider {
     border-color: rgba(0, 255, 157, 0.5); /* Adjust divider color */
-
+    cursor: none;
 }
 .dropdown-menu{
     --bs-dropdown-min-width : 75px;
+    cursor: none;
+}
+.btn{
+    transition: border 0.3s ease-in-out,cursor 0.1s ease-in-out;
 }
 .btn:hover{
     border: 0.1px solid #9f79ff;
+    cursor: none;
 }
 @media screen and (max-width: 768px) {
     *{

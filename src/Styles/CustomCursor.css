@@ -20,7 +20,7 @@ a {
 
 /* Hover effect: Increase size and reduce opacity */
 .custom-cursor.hovered {
-    width: 24px; /* Increased size */
+    width: 100px; /* Increased size */
     height: 24px;
     opacity: 0.5; /* Reduced opacity */
 }
