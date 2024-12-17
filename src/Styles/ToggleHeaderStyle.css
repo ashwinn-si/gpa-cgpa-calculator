@@ -1,11 +1,14 @@
-:focus {
+*{
+    border-width: 1px;
+}
+.mydict:focus {
     outline: 0;
-    border-color: rgba(255,235,59,1);
-    box-shadow: 0 0 0 4px rgba(255,235,59,0.5); /* Softer yellow highlight */
+    border-color: #8B5DFF; /* Purple border */
+    box-shadow: 0 0 0 4px rgba(139, 93, 255, 0.5); /* Softer purple highlight */
+    border-width: 1px;
 }
 
 .mydict div {
-
     height: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -25,11 +28,9 @@
 }
 
 .mydict input[type="radio"]:checked + span {
-
-    box-shadow: 0 0 0 0.0625em rgba(255,235,59,1); /* Yellow border */
-    /*background-color: rgba(255,235,59,0.2); !* Subtle yellow background *!*/
+    box-shadow: 0 0 0 0.0625em #9f79ff; /* Purple border */
     z-index: 1;
-    color: rgba(255,193,7,1); /* Darker yellow text for contrast */
+    color: #9f79ff; /* Darker purple text for contrast */
 }
 
 label span {
@@ -47,13 +48,12 @@ label span {
     text-align: center;
     transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
     width: 100%;
-
 }
 
 label span:hover {
-    background-color: rgba(255,235,59,0.3); /* Highlighted yellow on hover */
-    color: rgba(255,193,7,1); /* Darker yellow text */
-    box-shadow: 0 0 0 0.125em rgba(255,193,7,0.6); /* Slightly thicker yellow border */
+    background-color: rgba(139, 93, 255, 0.3); /* Highlighted purple on hover */
+    color: #8B5DFF; /* Darker purple text */
+    box-shadow: 0 0 0 0.125em rgba(139, 93, 255, 0.6); /* Slightly thicker purple border */
 }
 
 label:first-child span {
@@ -63,8 +63,9 @@ label:first-child span {
 label:last-child span {
     border-radius: 0 0.375em 0.375em 0;
 }
+
 @media  screen and (max-width: 768px) {
-    label span{
+    label span {
         width: 50vw;
     }
 }

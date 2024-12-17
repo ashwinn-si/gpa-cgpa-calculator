@@ -19,7 +19,7 @@ const DropDownBox = forwardRef((props , ref) => {
         <>
             <div className="dropdown">
                 <button
-                    className="btn dropdown-toggle custom-button"
+                    className="btn dropdown-toggle custom-button fw-light"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"

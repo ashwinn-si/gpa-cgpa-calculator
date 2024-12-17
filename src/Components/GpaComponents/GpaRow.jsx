@@ -31,26 +31,26 @@ const GpaRow = forwardRef((props, ref) => {
     return (
         <>
             {VisiblityFlag ? (
-                <div className="row d-flex  justify-content-around align-items-center my-2">
-                    <div className="col-4 fs-m primary-text-color fw-medium text-center">
+                <div className="row d-flex  justify-content-around align-items-center my-3">
+                    <div className="col-4 fs-m primary-text-color fw-light text-center">
                         <InputBox content={{
                             placeHolder : "Subject Name",
                             defaultValue : null,
                             type:"text"
                         }} ref={Refs.subjectName}/>
                     </div>
-                    <div className="col-1 fs-m primary-text-color fw-medium text-center delete-container" onClick={tester} >
-                    <span className="material-symbols-outlined" >
+                    <div className="col-1 fs-m primary-text-color fw-light text-center delete-container" onClick={tester} >
+                    <span className="material-symbols-outlined " >
                         delete
                     </span>
                     </div>
-                    <div className="col-2 fs-m primary-text-color fw-medium text-center">
+                    <div className="col-2 fs-m primary-text-color fw-light text-center">
                         <DropDownBox content={{
                             defaultValue : 1,
                             values : [1,2,3,4]
                         }} ref={Refs.credit}/>
                     </div>
-                    <div className="col-2 fs-m primary-text-color fw-medium text-center">
+                    <div className="col-2 fs-m primary-text-color fw-light text-center">
                         <DropDownBox content={{
                             defaultValue : "O",
                             values : ["O","A +","A","B +","B","C","U"]

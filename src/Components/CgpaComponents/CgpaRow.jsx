@@ -23,7 +23,7 @@ const CgpaRow = forwardRef((props, ref )  => {
             {
                 visiblityFlag ? (
                     <div className="row d-flex  justify-content-around align-items-center my-2">
-                        <div className="col-4  fs-m primary-text-color fw-medium text-center">
+                        <div className="col-4  fs-m primary-text-color fw-light text-center">
                             <InputBox content={{
                                 placeHolder: null,
                                 type: "text",
@@ -31,12 +31,12 @@ const CgpaRow = forwardRef((props, ref )  => {
 
                             }} ref = {Refs.semester}/>
                         </div>
-                        <div className="col-1   fs-m  primary-text-color fw-medium text-center delete-container">
+                        <div className="col-1   fs-m  primary-text-color fw-light text-center delete-container">
                 <span className="material-symbols-outlined " onClick={()=>setVisiblity(false)}>
                         delete
                 </span>
                         </div>
-                        <div className="col-4   fs-m  primary-text-color fw-medium text-center">
+                        <div className="col-4   fs-m  primary-text-color fw-light text-center">
                             <InputBox content={{
                                 placeHolder: "Enter GPA",
                                 defaultValue: null,

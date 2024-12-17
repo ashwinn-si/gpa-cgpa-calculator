@@ -18,7 +18,7 @@ function GpaContainer(props) {
 
     const refs = useRef([]);
     const [ErrorFlag , setErrorFlag] = useState(false);
-    const [resultFlag , setResultFlag] = useState(false);
+    const [resultFlag , setResultFlag] = useState("GPA : ");
     const [resultGpa, setResultGpa] = useState(null);
     const [UserInfoFlag , setUserInfoFlag] = useState(true);
 
@@ -48,12 +48,12 @@ function GpaContainer(props) {
                     setUserInfoFlag(true);
                     setAllRefs([]);
                 }
-                setResultFlag(false);
+                setResultFlag("GPA : ");
                 return;
             }
 
             setResultGpa( await GpaCalFunction(values))
-            setResultFlag(true)
+            setResultFlag("GPA : ")
 
         } else  {
             setAllRefs((prevValues) => {
@@ -67,14 +67,15 @@ function GpaContainer(props) {
 
     return (
         <>
-            <div className="container-md vh-70 primary-bg-color p-2 text-center mt-1  ">
-                {resultFlag ?
-                    <ResultDisplay resultMessage="GPA Score" resultScore={resultGpa}/> : null}
+            <div className="container-md vh-70 primary-bg-color p-2 text-center mt-1   custom-border-bottom">
+
+                    <ResultDisplay resultMessage={resultFlag} resultScore={resultGpa}/>
                 <GpaHeader/>
-                {ErrorFlag ? <ErrorMessageComponent error="Subject Name missing"/> : null}
+
                 <div className=" h-91 overflow-y-auto overflow-x-hidden custom-scrollbar">
+                    {ErrorFlag ? <ErrorMessageComponent error="Subject Name missing"/> : null}
                     {UserInfoFlag ? (
-                        <UserGuideContainer/>
+                        <UserGuideContainer message="Add Semester"/>
                     ) : (
                         AllRefs.slice().reverse().map((ref, index) => (
                             <GpaRow key={index} ref={ref}/>
@@ -86,17 +87,17 @@ function GpaContainer(props) {
 
 
             <div
-                className="container-fluid  vh-7-5 primary-bg-color p-2 text-center mt-1 d-flex justify-content-around align-items-center align-items-center my-2">
+                className="container-md  vh-7-5 primary-bg-color p-2 text-center mt-1 d-flex justify-content-around align-items-center align-items-center my-2 py-5">
                 <button name="AddSubject" onClick={ButtonClickHandler}>
                     <a>
-                        <span className="fs-s primary-text-color fw-semibold">Add Subject</span>
+                        <span className="fs-s primary-text-color fw-light">Add Subject</span>
                     </a>
                 </button>
                 {AllRefs.length === 0 ?
                     null :
                     (<button name="GpaCalFunction" onClick={ButtonClickHandler}>
                         <a>
-                            <span className="fs-s primary-text-color fw-semibold">Calculate</span>
+                            <span className="fs-s primary-text-color fw-light">Calculate</span>
                         </a>
                     </button>)
                 }

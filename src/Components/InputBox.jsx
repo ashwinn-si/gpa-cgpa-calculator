@@ -26,8 +26,8 @@ const InputBox = forwardRef((props, ref) => {
 
     return (
         <div className="form-control">
-            <input className="input input-alt text-center" placeholder={placeHolder != null ? placeHolder : null} required="" type={type} defaultValue={defaultValue != null ? defaultValue : null} onChange={handleChange} />
-            <span className="input-border input-border-alt text-center"></span>
+            <input className="input input-alt text-center fw-light" placeholder={placeHolder != null ? placeHolder : null} required="" type={type} defaultValue={defaultValue != null ? defaultValue : null} onChange={handleChange} />
+            <span className="input-border input-border-alt text-center fw-light"></span>
         </div>
     )
 })

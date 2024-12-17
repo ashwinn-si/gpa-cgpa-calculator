@@ -5,11 +5,8 @@ import {useRef, useState} from "react";
 import UserGuideContainer from "../UserGuideContainer";
 import React from "react";
 import ErrorMessageComponent from "../ErrorMessageComponent";
-import GpaCalFunctiondasda from "../../JavaScriptFiles/CgpaCalFunction";
-import GpaCalFunction from "../../JavaScriptFiles/GpaCalFunction";
 import CgpaCalFunction from "../../JavaScriptFiles/CgpaCalFunction";
 import ResultDisplay from "../ResultDisplay";
-import GpaHeader from "../GpaComponents/GpaHeader";
 import ExtraFeaturesContainer from "../ExtraFeaturesContainer";
 
 function CgpaContainer() {
@@ -134,44 +131,56 @@ function CgpaContainer() {
                         <ExtraFeaturesContainer content={UserGpa} modifyData={handleClose} function={ExtraFeatureFunction}/>
                      :
                     <>
-                        <div className="container-md vh-70 primary-bg-color p-2 text-center mt-1">
-                            {
-                                ResultDisplayFlag ? (<ResultDisplay resultMessage="CGPA Score" resultScore={ResultGpa}/> ) : null
-                            }
+                        <div className="container-md vh-70 primary-bg-color p-2 text-center mt-1
+                        custom-border-bottom">
+
+                                    <ResultDisplay resultMessage="CGPA : " resultScore={ResultGpa}/>
+
+
                             <CgpaHeader/>
-                            {
-                                ErrorFlag != 0 ? (<ErrorMessageComponent error={ErrorContent} /> ): null
-                            }
-                            {UserInfoFlag ? (<UserGuideContainer />)  : (
-                                AllRefs.map((ref,index)=>(
-                                    <CgpaRow key={index} ref = {ref} />
-                                ))
-                            )}
+                                <div className=" h-91 overflow-y-auto overflow-x-hidden custom-scrollbar ">
+                                    {
+                                        ErrorFlag != 0 ? (<ErrorMessageComponent error={ErrorContent}/>) : null
+                                    }
+                                    {UserInfoFlag ? (<UserGuideContainer message="Add Subject"/>) : (
+                                        AllRefs.map((ref, index) => (
+                                            <CgpaRow key={index} ref={ref}/>
+                                        ))
+                                    )}
+                                </div>
 
                         </div>
-                        <div className="container-fluid vh-7-5 primary-bg-color text-center my-2">
-                            <button name="AddSEM" onClick={handleClick} >
-                                <a>
-                                    <span className="fs-s primary-text-color fw-semibold">Add SEM</span>
-                                </a>
-                            </button>
+                        <div
+                                className="container-md vh-7-5 primary-bg-color text-center my-2  py-5 d-flex align-items-center justify-content-around align-items-center flex-wrap">
+                                {
+                                    ExtrasFlag ? (
+                                            <button name="CgpaCalFunction" onClick={handleClick}>
+                                                <a>
+                                                    <span className="fs-s primary-text-color fw-light">Calculate</span>
+                                                </a>
+                                            </button> ): null
+                               }
+                                <button name="AddSEM" onClick={handleClick}>
+                                    <a>
+                                        <span className="fs-s primary-text-color fw-light">Add SEM</span>
+                                    </a>
+                                </button>
+                                {
+                                    ExtrasFlag ? (
+                                            <button name="Analyse" onClick={handleClick}>
+                                                <a>
+                                                    <span className="fs-s primary-text-color fw-light">Analyse</span>
+                                                </a>
+                                            </button>
+                                    ) : null
+                                }
                         </div>
                         {
                             ExtrasFlag ? (<div
-                                className="container-fluid vh-7-5 primary-bg-color p-2 text-center mt-1 d-flex justify-content-around align-items-center align-items-center my-2">
-                                <button name="Analyse" onClick={handleClick}>
-                                    <a>
-                                        <span className="fs-s primary-text-color fw-semibold">Analyse</span>
-                                    </a>
-                                </button>
-                                <button name="CgpaCalFunction" onClick={handleClick}>
-                                    <a>
-                                        <span className="fs-s primary-text-color fw-semibold">Calculate</span>
-                                    </a>
-                                </button>
+                                className="container-md vh-7-5 primary-bg-color py-5 text-center mt-1 d-flex justify-content-around align-items-center align-items-center my-2 ">
                                 <button name="Predict" onClick={handleClick}>
                                     <a>
-                                        <span className="fs-s primary-text-color fw-semibold">Predict</span>
+                                        <span className="fs-s primary-text-color fw-light">Predict</span>
                                     </a>
                                 </button>
                             </div>) : null

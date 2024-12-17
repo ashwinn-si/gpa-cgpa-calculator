@@ -2,11 +2,11 @@
     font-size: 1rem;
 }
 .custom-button{
-    border: solid 1px #f4f4f9;
+    border: solid 0.1px #f4f4f9;
     color: #f4f4f4;
     padding-right: 2rem;
     position: relative;
-
+    width: 75px;
 }
 .custom-button::after{
     position: absolute;
@@ -15,12 +15,12 @@
 }
 .custom-dropdown {
     background-color: #141414 !important; /* Transparent background */
-    border: 1px solid rgba(255, 255, 255, 0.5); /* Semi-transparent border */
+    border: 0.1px solid rgba(255, 255, 255, 0.5); /* Semi-transparent border */
 }
 
 .custom-dropdown .dropdown-item {
     color: #fff; /* Text color */
-    border: 1px solid transparent; /* Invisible border initially */
+    border: 0.1px solid transparent; /* Invisible border initially */
     padding:0.5rem 0.5rem; /* Add padding for spacing inside the border */
     transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth transition for border and background */
 
@@ -28,24 +28,30 @@
 
 .custom-dropdown .dropdown-item:hover,
 .custom-dropdown .dropdown-item:focus {
-    border: 1px solid rgba(255, 255, 255, 0.8); /* Border becomes visible on hover */
-    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover background effect */
+    border: 0.1px solid rgba(255, 255, 255, 0.8); /* Border becomes visible on hover */
+    background-color: #9f79ff; /* Subtle hover background effect */
     color: #fff; /* Maintain text color */
 
 }
 
 .custom-dropdown .dropdown-divider {
-    border-color: rgba(255, 255, 255, 0.5); /* Adjust divider color */
+    border-color: rgba(0, 255, 157, 0.5); /* Adjust divider color */
 
 }
 .dropdown-menu{
-    --bs-dropdown-min-width : 50px;
+    --bs-dropdown-min-width : 75px;
+}
+.btn:hover{
+    border: 0.1px solid #9f79ff;
 }
 @media screen and (max-width: 768px) {
     *{
         font-size: 0.8rem;
     }
+    .custom-button{
+        width: 50px;
+    }
     .dropdown-menu{
-        --bs-dropdown-min-width : 75px;
+        --bs-dropdown-min-width : 50px;
     }
 }

@@ -11,7 +11,7 @@ body{
 /*view heights styling*/
 
 .vh-7-5{
-    height: 6.6vh;
+    height: 7.5vh;
 }
 .vh-70{
     height: 70vh;
@@ -20,7 +20,7 @@ body{
     height: 80vh;
 }
 .h-91{
-    height: 87%;
+    height: 75%;
 }
 .min-w{
     min-width: 300px;
@@ -64,7 +64,7 @@ body{
     color:#f4f4f9
 }
 .hilight-text-color{
-    color: rgba(255,235,59,1);
+    color: #9f79ff;
 }
 
 .border-primary{
@@ -72,8 +72,25 @@ body{
 }
 
 /*delete container*/
-.delete-container{
+.delete-container span{
     cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+.delete-container span:hover{
+    transform: scale(1.1);
+    color: #9f79ff;
+}
+
+/*custom border*/
+.custom-border-bottom{
+    border-bottom: solid 1.5px #9f79ff;
+}
+.custom-border-top{
+    border-top: solid 1.5px #9f79ff;
+}
+.custom-main-border{
+    border-right: solid 1.5px #9f79ff;
+    border-left: solid 1.5px #9f79ff;
 }
 
 /*custom scrolling bar*/
@@ -89,12 +106,34 @@ body{
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-    background:rgba(255,235,59,1); /* Set the scrollbar color */
+    background:#9f79ff; /* Set the scrollbar color */
     border-radius: 10px; /* Set rounded corners */
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background: #555; /* Set color when hovering over the scrollbar */
+}
+/* Main scrollbar styles */
+.custom-scrollbar-main::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+    height: 1px;
+}
+
+/* Track (scrollbar background) */
+.custom-scrollbar-main::-webkit-scrollbar-track {
+    background: #f4f4f9; /* Light background for the track */
+}
+
+/* Thumb (scrollable part) */
+.custom-scrollbar-main::-webkit-scrollbar-thumb {
+    background: #9f79ff; /* Custom purple color */
+    border-radius: 1px; /* Rounded corners */
+
+}
+
+/* Hover state for thumb */
+.custom-scrollbar-main::-webkit-scrollbar-thumb:hover {
+    background: #7a4fd6; /* Slightly darker purple on hover */
 }
 
 /*pop up message*/
@@ -116,7 +155,7 @@ body{
         font-size: 1.8rem;
     }
     .fs-m{
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     .delete-container span{
         font-size: 1.5rem;
