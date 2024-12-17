@@ -9,6 +9,7 @@ function AnalyseChart(values) {
         analyse_sems.push(`sem-${count}`);
         count++;
     });
+    
     let total_gpa = 0;
     for (let i = 0; i < count - 1; i++) {
         total_gpa += analyse_gpa[i];
