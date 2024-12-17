@@ -25,7 +25,7 @@ Ensure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/ashwinn-si/https://github.com/ashwinn-si/gpa-cgpa-cal.git
+   git clone https://github.com/ashwinn-si/gpa-cgpa-calculator.git
    ```
 
 2. Navigate to the project directory:
