@@ -1,8 +1,9 @@
 import Loader from "./Loader";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import AnalyseChart from "../JavaScriptFiles/AnalyseChart";
 import AnalyseGraph from "./Chart";
 import predictScript from "../JavaScriptFiles/PredictScript";
+import "../Styles/CommonStyle.css"
 
 function ExtraFeaturesContainer(props) {
     const {content , modifyData} = props;
@@ -35,17 +36,21 @@ function ExtraFeaturesContainer(props) {
         modifyData(false);
     }
     return (
-        <div className="container-md vh-100 position-absolute z-1 bg-danger opacity-1 d-flex flex-column justify-content-center align-items-center">
-            <div className="p-5 bg-black d-flex flex-column justify-content-center align-items-center ">
+        <div className="container-md vh-100 min-vw-100 position-absolute z-1  opacity-1 d-flex flex-column justify-content-center align-items-center top-0 start-0 primary-bg-color">
+            <div className="p-5 bg-black d-flex flex-column justify-content-center align-items-center border border-color">
                 {loaderFlag ? (
                     <>
-                        <p className="fs-l my-3 fw-bold">Calculating...</p>
+                        <p className="fs-l my-3 fw-light primary-text-color">Calculating...</p>
                         <Loader/>
                     </>
                 ) : (
                     <>
                         <AnalyseGraph content={chartData} title={title} description={desc}/>
-                        <button onClick={handleClose}>ashwin si</button>
+                        <button name="Analyse" onClick={handleClose}>
+                            <a>
+                                <span className="fs-s primary-text-color fw-light primary-bg-color">Return</span>
+                            </a>
+                        </button>
                     </>
                 )}
             </div>

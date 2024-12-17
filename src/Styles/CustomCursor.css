@@ -1,0 +1,27 @@
+body,
+button,
+input,
+textarea,
+a {
+    cursor: none; /* Hide the default cursor */
+}
+/* Base cursor style */
+.custom-cursor {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    background-color: rgba(159, 121, 255, 1); /* Cursor color */
+    border-radius: 50%;
+    pointer-events: none; /* Allow events to pass through */
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease, opacity 0.2s ease; /* Smooth transitions */
+    z-index: 9999; /* Ensure it stays on top */
+}
+
+/* Hover effect: Increase size and reduce opacity */
+.custom-cursor.hovered {
+    width: 24px; /* Increased size */
+    height: 24px;
+    opacity: 0.5; /* Reduced opacity */
+}
+

@@ -1,0 +1,11 @@
+body,
+button,
+input,
+textarea,
+a {
+    cursor: none; /* Hide the default cursor */
+}
+*:active,
+*:focus {
+    cursor: none; /* Ensure default cursor does not appear */
+}

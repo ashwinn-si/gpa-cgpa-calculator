@@ -76,9 +76,9 @@ const AnalyseGraph = (props) => {
 
     return (
         <div style={{position: "relative", height: "400px", width: "350px" ,display : "flex", justifyContent: "center" , alignItems: "center" , flexDirection: "column"}}>
-            <p className="fs-m my-3 fw-bold">{props.title}</p>
+            <p className="fs-m my-3 fw-bold primary-text-color">{props.title}</p>
             <canvas id="myChart" ref={chartRef}></canvas>
-            <p  className="fs-xs my-3 fw-medium">{props.description}</p>
+            <p  className="fs-xs my-3 fw-medium primary-text-color">{props.description}</p>
         </div>
     );
 };
