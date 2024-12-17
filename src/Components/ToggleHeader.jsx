@@ -10,7 +10,6 @@ import UserGuideContainer from "./UserGuideContainer";
 function ToggleHeader() {
 
     const [ToggleHeaderFlag, setToggleHeaderFlag] = useState("UserGuide");
-    // ToggleHeaderFlag -> True [GPA CAL] | False [CGPA CAL]
 
     function handleToggleHeader(event) {
         setToggleHeaderFlag(event.target.value);

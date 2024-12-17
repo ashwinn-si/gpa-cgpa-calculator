@@ -31,6 +31,9 @@ body{
 .max-w{
     max-width: 500px ;
 }
+.vw-90{
+    width: 80vw;
+}
 .h-50{
     height: 200px;
 }

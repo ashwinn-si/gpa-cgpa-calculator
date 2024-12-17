@@ -7,6 +7,7 @@ import UserGuideContainer from "../UserGuideContainer";
 import ErrorMessageComponent from "../ErrorMessageComponent";
 import GpaCalFunction from "../../JavaScriptFiles/GpaCalFunction";
 import ResultDisplay from "../ResultDisplay";
+import ExtraFeaturesContainer from "../ExtraFeaturesContainer";
 
 
 function GpaContainer(props) {
