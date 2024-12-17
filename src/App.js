@@ -6,7 +6,9 @@ import CustomCursor from "./Components/CustomCursor";
 function App() {
   return (
           <MainFrame>
-              <CustomCursor />
+            {
+              window.innerWidth > 768 ? <CustomCursor/> : null
+            }
               <ToggleHeader />
           </MainFrame>
   );
