@@ -59,6 +59,7 @@ function CgpaContainer() {
                 setErrorFlag(0);
             }, 3000)
             setResultDisplay(false);
+            setResultGpa(null);
             return false;
         } else if (ErrorFlag == 2) {
             setErrorFlag(1);
@@ -67,10 +68,12 @@ function CgpaContainer() {
                 setErrorFlag(0);
             }, 3000)
             setResultDisplay(false);
+            setResultGpa(null);
             return false;
         }
         if (currSem.length == 0) {
             setAllRefs([])
+            setResultGpa(null);
             setUserInfoFlag(true);
             setExtrasFlag(false);
             setResultDisplay(false);

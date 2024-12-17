@@ -36,6 +36,7 @@ function GpaContainer(props) {
                                 setErrorFlag(false);
                             }, 3000);
                             errorFlag = true;
+                            setResultGpa(null)
                         }
                         values.push(item.current.getData());
                     }
@@ -47,6 +48,7 @@ function GpaContainer(props) {
                 if(values.length === 0){
                     setUserInfoFlag(true);
                     setAllRefs([]);
+                    setResultGpa(null)
                 }
                 setResultFlag("GPA : ");
                 return;
