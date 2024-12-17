@@ -93,50 +93,60 @@ body{
     border-left: solid 1.5px #9f79ff;
 }
 
-
+/*credit styling*/
+.credit{
+    transition: all 0.3s ease-out;
+}
+.credit:hover{
+    transform: scale(1.1);
+    font-size: 1.3rem;
+    cursor:pointer;
+}
 /*custom scrolling bar*/
 
-/* Style the scrollbar */
-.custom-scrollbar::-webkit-scrollbar {
-    width: 1px; /* Set the width of the scrollbar */
-    height: 4px;
-}
+@media screen and (min-width: 768px) {
+    /* Style the scrollbar */
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 1px; /* Set the width of the scrollbar */
+        height: 4px;
+    }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-    background: #f4f4f9; /* Set the track color */
-}
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: #f4f4f9; /* Set the track color */
+    }
 
-.custom-scrollbar::-webkit-scrollbar-thumb {
-    background:#9f79ff; /* Set the scrollbar color */
-    border-radius: 10px; /* Set rounded corners */
-}
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background:#9f79ff; /* Set the scrollbar color */
+        border-radius: 10px; /* Set rounded corners */
+    }
 
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Set color when hovering over the scrollbar */
-}
-/* Main scrollbar styles */
-.custom-scrollbar-main::-webkit-scrollbar {
-    width: 5px; /* Width of the scrollbar */
-    height: 1px;
-}
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #555; /* Set color when hovering over the scrollbar */
+    }
+    /* Main scrollbar styles */
+    .custom-scrollbar-main::-webkit-scrollbar {
+        width: 5px; /* Width of the scrollbar */
+        height: 1px;
+    }
 
-/* Track (scrollbar background) */
-.custom-scrollbar-main::-webkit-scrollbar-track {
-    background: #f4f4f9; /* Light background for the track */
+    /* Track (scrollbar background) */
+    .custom-scrollbar-main::-webkit-scrollbar-track {
+        background: #f4f4f9; /* Light background for the track */
+    }
+
+    /* Thumb (scrollable part) */
+    .custom-scrollbar-main::-webkit-scrollbar-thumb {
+        background: #9f79ff; /* Custom purple color */
+        border-radius: 1px; /* Rounded corners */
+
+    }
+
+    /* Hover state for thumb */
+    .custom-scrollbar-main::-webkit-scrollbar-thumb:hover {
+        background: #7a4fd6; /* Slightly darker purple on hover */
+    }
+
 }
-
-/* Thumb (scrollable part) */
-.custom-scrollbar-main::-webkit-scrollbar-thumb {
-    background: #9f79ff; /* Custom purple color */
-    border-radius: 1px; /* Rounded corners */
-
-}
-
-/* Hover state for thumb */
-.custom-scrollbar-main::-webkit-scrollbar-thumb:hover {
-    background: #7a4fd6; /* Slightly darker purple on hover */
-}
-
 /*pop up message*/
 .popup-message {
     animation: slide-up 2s ease-out;
