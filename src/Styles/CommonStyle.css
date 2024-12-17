@@ -103,26 +103,27 @@ body{
     cursor:pointer;
 }
 /*custom scrolling bar*/
+.custom-scrollbar::-webkit-scrollbar {
+    width: 1px; /* Set the width of the scrollbar */
+    height: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f4f4f9; /* Set the track color */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background:#9f79ff; /* Set the scrollbar color */
+    border-radius: 10px; /* Set rounded corners */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Set color when hovering over the scrollbar */
+}
 
 @media screen and (min-width: 768px) {
     /* Style the scrollbar */
-    .custom-scrollbar::-webkit-scrollbar {
-        width: 1px; /* Set the width of the scrollbar */
-        height: 4px;
-    }
 
-    .custom-scrollbar::-webkit-scrollbar-track {
-        background: #f4f4f9; /* Set the track color */
-    }
-
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-        background:#9f79ff; /* Set the scrollbar color */
-        border-radius: 10px; /* Set rounded corners */
-    }
-
-    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-        background: #555; /* Set color when hovering over the scrollbar */
-    }
     /* Main scrollbar styles */
     .custom-scrollbar-main::-webkit-scrollbar {
         width: 5px; /* Width of the scrollbar */

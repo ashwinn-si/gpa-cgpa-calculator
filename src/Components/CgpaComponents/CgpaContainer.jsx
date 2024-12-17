@@ -136,14 +136,11 @@ function CgpaContainer() {
                     <>
                         <div className="container-md vh-70 primary-bg-color p-2 text-center mt-1
                         custom-border-bottom">
-
-                                    <ResultDisplay resultMessage="CGPA : " resultScore={ResultGpa}/>
-
-
+                            <ResultDisplay resultMessage="CGPA : " resultScore={ResultGpa}/>
                             <CgpaHeader/>
                                 <div className=" h-91 overflow-y-auto overflow-x-hidden custom-scrollbar ">
                                     {
-                                        ErrorFlag != 0 ? (<ErrorMessageComponent error={ErrorContent}/>) : null
+                                        ErrorFlag != 0 ? (<ErrorMessageComponent error={ErrorContent} />) : null
                                     }
                                     {UserInfoFlag ? (<UserGuideContainer message="Add Subject"/>) : (
                                         AllRefs.map((ref, index) => (
