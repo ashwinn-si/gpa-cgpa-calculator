@@ -1,27 +1,51 @@
-body,
-button,
-input,
-textarea,
-a {
-    cursor: none; /* Hide the default cursor */
-}
-/* Base cursor style */
+/* Base Cursor Style */
 .custom-cursor {
     position: fixed;
-    width: 12px;
-    height: 12px;
-    background-color: rgba(159, 121, 255, 1); /* Cursor color */
+    width: 14px;
+    height: 14px;
+    background: linear-gradient(45deg, #9f79ff, #f39c12);
+    border: 2px solid #ffffff;
     border-radius: 50%;
-    pointer-events: none; /* Allow events to pass through */
+    box-shadow: 0 0 15px rgba(159, 121, 255, 0.6);
+    pointer-events: none;
     transform: translate(-50%, -50%);
-    transition: width 0.2s ease, height 0.2s ease, opacity 0.2s ease; /* Smooth transitions */
-    z-index: 9999; /* Ensure it stays on top */
+    transition: transform 0.1s ease, width 0.3s ease, height 0.3s ease, background 0.5s ease;
+    z-index: 9999;
 }
 
-/* Hover effect: Increase size and reduce opacity */
+/* Ripple Effect */
+
+
+/* Hover Effect */
 .custom-cursor.hovered {
-    width: 100px; /* Increased size */
-    height: 24px;
-    opacity: 0.5; /* Reduced opacity */
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, #9f79ff, #e74c3c);
+    box-shadow: 0 0 25px rgba(231, 76, 60, 0.8);
+    border: 2px solid #f4f4f9;
 }
 
+
+/* Trail Effect */
+.cursor-trail {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: trail-fade 1s ease-out forwards;
+    z-index: 9999;
+}
+
+@keyframes trail-fade {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+}

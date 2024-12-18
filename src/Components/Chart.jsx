@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Chart, registerables } from "chart.js";
 import 'chart.js/auto';
+import "../Styles/CommonStyle.css";
 
 Chart.register(...registerables); // Register necessary chart components
 
@@ -75,8 +76,8 @@ const AnalyseGraph = (props) => {
     }, [analyse_sems, analyse_gpa, analyse_cgpa, analyse_min_cgpa, analyse_max_cgpa]);
 
     return (
-        <div style={{position: "relative", height: "400px", width: "350px" ,display : "flex", justifyContent: "center" , alignItems: "center" , flexDirection: "column"}}>
-            <p className="fs-m my-3 fw-bold primary-text-color">{props.title}</p>
+        <div className="position-relative d-flex justify-content-center align-content-center flex-column chart">
+            <p className="fs-m my-3 fw-bold primary-text-color text-center">{props.title}</p>
             <canvas id="myChart" ref={chartRef}></canvas>
             <p  className="fs-xs my-3 fw-medium primary-text-color">{props.description}</p>
         </div>

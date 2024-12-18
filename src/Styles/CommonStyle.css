@@ -73,12 +73,13 @@ body{
 
 /*delete container*/
 .delete-container span{
-    cursor: pointer;
+    cursor: none;
     transition: all 0.3s ease-out;
 }
 .delete-container span:hover{
     transform: scale(1.1);
     color: #9f79ff;
+    cursor: none;
 }
 
 /*custom border*/
@@ -121,6 +122,11 @@ body{
     background: #555; /* Set color when hovering over the scrollbar */
 }
 
+/*chart stylings*/
+.chart{
+    height: 400px;
+    width: 500px;
+}
 @media screen and (min-width: 768px) {
     /* Style the scrollbar */
 
@@ -171,5 +177,8 @@ body{
     }
     .delete-container span{
         font-size: 1.5rem;
+    }
+    .chart{
+        width: 300px;
     }
 }
