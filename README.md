@@ -31,7 +31,7 @@ Ensure you have the following installed:
 2. Navigate to the project directory:
 
    ```bash
-   cd gpa-cgpa-cal
+   cd gpa-cgpa-calculator
    ```
 
 3. Install the dependencies:
