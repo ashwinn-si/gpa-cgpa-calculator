@@ -4,8 +4,15 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+:root{
+    --primary-bg : #141414;
+    --hilight-color : #9f79ff;
+    --hilight-dark-color:#7a4fd6 ;
+    --secondary-bg : #f4f4f9;
+    --text-color : #f4f4f9;
+}
 body{
-    background-color: #141414;
+    background-color: var(--primary-bg);
 }
 
 /*view heights styling*/
@@ -57,18 +64,19 @@ body{
 
 /*coloring styling*/
 .primary-bg-color{
-    background-color: #141414;
+    background-color: var(--primary-bg);
 }
 
 .primary-text-color{
-    color:#f4f4f9
+    color:var(--text-color);
 }
 .hilight-text-color{
-    color: #9f79ff;
+    color: var(--hilight-color);
+    cursor: none;
 }
 
 .border-primary{
-    border-color: #f4f4f9 !important;
+    border-color: var(--secondary-bg) !important;
 }
 
 /*delete container*/
@@ -78,20 +86,20 @@ body{
 }
 .delete-container span:hover{
     transform: scale(1.1);
-    color: #9f79ff;
+    color: var(--hilight-color);
     cursor: none;
 }
 
 /*custom border*/
 .custom-border-bottom{
-    border-bottom: solid 1.5px #9f79ff;
+    border-bottom: solid 1.5px var(--hilight-color);
 }
 .custom-border-top{
-    border-top: solid 1.5px #9f79ff;
+    border-top: solid 1.5px var(--hilight-color);
 }
 .custom-main-border{
-    border-right: solid 1.5px #9f79ff;
-    border-left: solid 1.5px #9f79ff;
+    border-right: solid 1.5px var(--hilight-color);
+    border-left: solid 1.5px var(--hilight-color);
 }
 
 /*credit styling*/
@@ -101,7 +109,7 @@ body{
 .credit:hover{
     transform: scale(1.1);
     font-size: 1.3rem;
-    cursor:pointer;
+    cursor:none;
 }
 /*custom scrolling bar*/
 .custom-scrollbar::-webkit-scrollbar {
@@ -110,11 +118,11 @@ body{
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-    background: #f4f4f9; /* Set the track color */
+    background: var(--secondary-bg)/* Set the track color */
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-    background:#9f79ff; /* Set the scrollbar color */
+    background:var(--hilight-color); /* Set the scrollbar color */
     border-radius: 10px; /* Set rounded corners */
 }
 
@@ -138,25 +146,31 @@ body{
 
     /* Track (scrollbar background) */
     .custom-scrollbar-main::-webkit-scrollbar-track {
-        background: #f4f4f9; /* Light background for the track */
+        background: var(--secondary-bg); /* Light background for the track */
     }
 
     /* Thumb (scrollable part) */
     .custom-scrollbar-main::-webkit-scrollbar-thumb {
-        background: #9f79ff; /* Custom purple color */
+        background: var(--hilight-color); /* Custom purple color */
         border-radius: 1px; /* Rounded corners */
 
     }
 
     /* Hover state for thumb */
     .custom-scrollbar-main::-webkit-scrollbar-thumb:hover {
-        background: #7a4fd6; /* Slightly darker purple on hover */
+        background: var(--hilight-dark-color); /* Slightly darker purple on hover */
     }
 
 }
 /*pop up message*/
 .popup-message {
     animation: slide-up 2s ease-out;
+}
+
+/*extra helper text*/
+.extra-help-text{
+    color: white;
+    text-shadow: 0.1px 0.1px 0 var(--hilight-color), -0.1px -0.1px 0 var(--hilight-color), 0.1px -0.1px 0 var(--hilight-color), -0.1px 0.1px 0 var(--hilight-color);
 }
 
 /* Keyframes for the bottom to top slide */

@@ -1,4 +1,5 @@
-/* From Uiverse.io by ZacharyCrespin */
+@import url("./CommonStyle.css");
+
 @keyframes square-animation {
     0% {
         left: 0;

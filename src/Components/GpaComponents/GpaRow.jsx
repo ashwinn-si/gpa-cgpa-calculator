@@ -47,7 +47,7 @@ const GpaRow = forwardRef((props, ref) => {
                     <div className="col-2 fs-m primary-text-color fw-light text-center">
                         <DropDownBox content={{
                             defaultValue : 1,
-                            values : [1,1.5,2,3,4]
+                            values : [1,1.5,2,3,4,5]
                         }} ref={Refs.credit}/>
                     </div>
                     <div className="col-2 fs-m primary-text-color fw-light text-center">

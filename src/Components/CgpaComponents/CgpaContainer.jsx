@@ -29,6 +29,7 @@ function CgpaContainer() {
         setExtraFeaturesFlag(modifiedData);
         setAllRefs([]);
         setResultGpa(null);
+        setUserInfoFlag(true);
     }
 
     //function that retrives the data from all the child component
