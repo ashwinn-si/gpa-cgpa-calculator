@@ -77,7 +77,7 @@ function GpaContainer(props) {
                 <div className=" h-91 overflow-y-auto overflow-x-hidden custom-scrollbar ">
                     {ErrorFlag ? <ErrorMessageComponent error="Subject Name missing"/> : null}
                     {UserInfoFlag ? (
-                        <UserGuideContainer message="Add Semester"/>
+                        <UserGuideContainer message="Add Subject Below !!"/>
                     ) : (
                         AllRefs.slice().reverse().map((ref, index) => (
                             <GpaRow key={index} ref={ref}/>

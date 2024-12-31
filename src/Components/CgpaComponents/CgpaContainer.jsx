@@ -144,7 +144,7 @@ function CgpaContainer() {
                                     {
                                         ErrorFlag != 0 ? (<ErrorMessageComponent error={ErrorContent} />) : null
                                     }
-                                    {UserInfoFlag ? (<UserGuideContainer message="Add Subject Below"/>) : (
+                                    {UserInfoFlag ? (<UserGuideContainer message="Add Semester Below !!"/>) : (
                                         AllRefs.map((ref, index) => (
                                             <CgpaRow key={index} ref={ref}/>
                                         ))
