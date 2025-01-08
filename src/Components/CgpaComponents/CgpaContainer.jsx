@@ -15,7 +15,7 @@ function CgpaContainer() {
     const[ResultGpa, setResultGpa] = useState(null);
     const[UserInfoFlag, setUserInfoFlag] = useState(true);
     const[ExtrasFlag, setExtrasFlag] = useState(false); //flag for the extra buttons
-    const addSemButtonRef = useRef(null);
+
     const[UserGpa, setUserGpa] = useState([]);
     const[UserSemester, setUserSemester] = useState([]);
     const [ErrorFlag, setErrorFlag] = useState(false);
@@ -101,7 +101,6 @@ function CgpaContainer() {
         const functionName = e.currentTarget.name;
         if (functionName === "AddSEM") {
             if (functionName === "AddSEM") {
-                addSemButtonRef.current.focus();
                 setAllRefs((prevState) => {
                     const newRef = React.createRef(); // Use React.createRef()
                     ref.current.push(newRef);
@@ -119,6 +118,7 @@ function CgpaContainer() {
                     setExtraFeatureFunction("Analyse")
                 }
             })
+
         } else{
             DataReterival().then((result)=>{
                 if(result){
@@ -140,50 +140,53 @@ function CgpaContainer() {
                         custom-border-bottom">
                             <ResultDisplay resultMessage="CGPA : " resultScore={ResultGpa}/>
                             <CgpaHeader/>
-                            <div className=" h-91 overflow-y-auto overflow-x-hidden custom-scrollbar">
+                                <div className=" h-91 overflow-y-auto overflow-x-hidden custom-scrollbar">
+                                    {
+                                        ErrorFlag != 0 ? (<ErrorMessageComponent error={ErrorContent} />) : null
+                                    }
+                                    {UserInfoFlag ? (<UserGuideContainer message="Add Semester Below !!"/>) : (
+                                        AllRefs.map((ref, index) => (
+                                            <CgpaRow key={index} ref={ref}/>
+                                        ))
+                                    )}
+                                </div>
+
+                        </div>
+                        <div
+                                className="container-md vh-7-5 primary-bg-color text-center my-2  py-5 d-flex align-items-center justify-content-around align-items-center flex-wrap">
                                 {
-                                    ErrorFlag != 0 ? (<ErrorMessageComponent error={ErrorContent}/>) : null
-                                }
-                                {UserInfoFlag ? (<UserGuideContainer message="Add Semester Below !!"/>) : (
-                                    AllRefs.map((ref, index) => (
-                                        <CgpaRow key={index} ref={ref}/>
-                                    ))
-                                )}
-                                <button name="AddSEM" onClick={handleClick} className="m-3"  ref={addSemButtonRef}>
+                                    ExtrasFlag ? (
+                                            <button name="CgpaCalFunction" onClick={handleClick}>
+                                                <a>
+                                                    <span className="fs-s primary-text-color fw-light">Calculate</span>
+                                                </a>
+                                            </button> ): null
+                               }
+                                <button name="AddSEM" onClick={handleClick}>
                                     <a>
                                         <span className="fs-s primary-text-color fw-light">Add SEM</span>
                                     </a>
                                 </button>
-                            </div>
-
+                                {
+                                    ExtrasFlag ? (
+                                            <button name="Analyse" onClick={handleClick}>
+                                                <a>
+                                                    <span className="fs-s primary-text-color fw-light">Analyse</span>
+                                                </a>
+                                            </button>
+                                    ) : null
+                                }
                         </div>
-                        <div
-                            className="container-md vh-7-5 primary-bg-color text-center my-2  py-5 d-flex align-items-center justify-content-around align-items-center flex-wrap">
-                            {
-                                ExtrasFlag ?
-                                    <>
-                                        <button name="Predict" onClick={handleClick}>
-                                            <a>
-                                                <span className="fs-s primary-text-color fw-light">Predict</span>
-                                            </a>
-                                        </button>
-                                        <button name="CgpaCalFunction" onClick={handleClick}>
-                                            <a>
-                                                <span className="fs-s primary-text-color fw-light">Calculate</span>
-                                            </a>
-                                        </button>
-                                        <button name="Analyse" onClick={handleClick}>
-                                            <a>
-                                                <span className="fs-s primary-text-color fw-light">Analyse</span>
-                                            </a>
-                                        </button>
-                                    </>
-                                    : null
-
-                            }
-
-                        </div>
-
+                        {
+                            ExtrasFlag ? (<div
+                                className="container-md vh-7-5 primary-bg-color py-5 text-center mt-1 d-flex justify-content-around align-items-center align-items-center my-2 ">
+                                <button name="Predict" onClick={handleClick}>
+                                    <a>
+                                        <span className="fs-s primary-text-color fw-light">Predict</span>
+                                    </a>
+                                </button>
+                            </div>) : null
+                        }
                     </>
             }
         </>
