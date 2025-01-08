@@ -83,6 +83,11 @@ function GpaContainer(props) {
                             <GpaRow key={index} ref={ref}/>
                         ))
                     )}
+                    <button name="AddSubject" onClick={ButtonClickHandler} className="m-2">
+                        <a>
+                            <span className="fs-s primary-text-color fw-light">Add Subject</span>
+                        </a>
+                    </button>
                 </div>
 
             </div>
@@ -90,11 +95,7 @@ function GpaContainer(props) {
 
             <div
                 className="container-md  vh-7-5 primary-bg-color p-2 text-center mt-1 d-flex justify-content-around align-items-center align-items-center my-2 py-5">
-                <button name="AddSubject" onClick={ButtonClickHandler}>
-                    <a>
-                        <span className="fs-s primary-text-color fw-light">Add Subject</span>
-                    </a>
-                </button>
+                
                 {AllRefs.length === 0 ?
                     null :
                     (<button name="GpaCalFunction" onClick={ButtonClickHandler}>
