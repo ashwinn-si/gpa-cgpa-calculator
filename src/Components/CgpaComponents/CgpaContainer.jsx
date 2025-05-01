@@ -1,7 +1,8 @@
 import "../../Styles/CommonStyle.css"
 import CgpaHeader from "./CgpaHeader";
 import CgpaRow from "./CgpaRow";
-import {useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
+import api from "../../api"
 import UserGuideContainer from "../UserGuideContainer";
 import React from "react";
 import ErrorMessageComponent from "../ErrorMessageComponent";
@@ -96,6 +97,12 @@ function CgpaContainer() {
         setResultDisplay(true);
         return true;
     }
+    useEffect(() => {
+        if (!ResultGpa) return;
+        api.post("/gpa-cgpa-cal/add-cgpa", {
+            cgpa: ResultGpa,
+        })
+    },[ResultGpa])
 
     function handleClick(e) {
         const functionName = e.currentTarget.name;

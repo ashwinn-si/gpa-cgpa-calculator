@@ -8,6 +8,7 @@ import ErrorMessageComponent from "../ErrorMessageComponent";
 import GpaCalFunction from "../../JavaScriptFiles/GpaCalFunction";
 import ResultDisplay from "../ResultDisplay";
 import ExtraFeaturesContainer from "../ExtraFeaturesContainer";
+import api from "../../api"
 
 
 function GpaContainer(props) {
@@ -22,6 +23,12 @@ function GpaContainer(props) {
     const [resultGpa, setResultGpa] = useState(null);
     const [UserInfoFlag , setUserInfoFlag] = useState(true);
 
+    useEffect(() => {
+        if(!resultGpa) return;
+        api.post("/gpa-cgpa-cal/add-gpa",{
+            gpa: resultGpa
+        })
+    },[resultGpa])
     async function ButtonClickHandler(e) {
         if (e.currentTarget.name === "GpaCalFunction") {
             setValues([]);
@@ -56,7 +63,7 @@ function GpaContainer(props) {
 
             setResultGpa( await GpaCalFunction(values))
             setResultFlag("GPA : ")
-
+        
         } else  {
             setAllRefs((prevValues) => {
                 const newRowRef = {current: null}
